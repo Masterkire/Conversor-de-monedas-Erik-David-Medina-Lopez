@@ -1,54 +1,49 @@
 package com.programadormaster.Conversor;
 
-import java.text.DecimalFormat;
-
 import javax.swing.JOptionPane;
 
 public class Conversor {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ConversorDivisas conversion=new ConversorDivisas();
-		String cantidadString = JOptionPane.showInputDialog(null, "Ingrese la cantidad en pesos mexicanos:");
-		double cantidad = Double.parseDouble(cantidadString);
+		boolean continuar = true;
 		
-		String[] opciones = {
-				"Peso(MXN) a Dolar", 
-				"Peso(MXN) a Won", 
-				"Peso(MXN) a Peso Colombiano", 
-				"Peso(MXN) a Sol", 
-				"Peso(MXN) a Peso Argentino", 
-				"Peso(MXN) a Euro", 
-				"Peso(MXN) a Yen Japones", 
-				"Peso(MXN) a Libra Esterlina",
-				"Dólar a Peso(MXN)", 
-				"Won a Peso(MXN)", 
-				"Peso Colombiano a Peso(MXN)", 
-				"Sol a Peso(MXN)", 
-				"Peso Argentino a Peso(MXN)", 
-				"Euro a Peso(MXN)", 
-				"Yen Japones a Peso(MXN)", 
-				"Libra Esterlina a Peso(MXN)"
-				};
+		while(continuar) {
+			
+			String[] opciones = {"Conversor de Monedas", "Conversor de Longitudes"}; // Agrega más opciones según los conversores que tengas
+			String tipoConversor = (String) JOptionPane.showInputDialog(null, "Seleccione el tipo de conversor:",
+					"Seleccionar tipo de conversor", JOptionPane.PLAIN_MESSAGE, null, opciones, opciones[0]);
+			
+			// Modifica el título de la ventana según el tipo de conversor seleccionado
+			String tituloVentana = "Conversor de Monedas"; // Título por defecto
+			
+			switch (tipoConversor) {
+			case "Conversor de Monedas":
+				tituloVentana = "Conversor de Monedas";
+				ConversorDivisas.convertirPesoMexicano();
+				break;
+				/*case "Conversor de Longitudes":
+                tituloVentana = "Conversor de Longitudes";
+//                ConversorLongitudes.convertirKilometrosAMetros();
+                break;*/
+			default:
+				JOptionPane.showMessageDialog(null, "Tipo de conversor inválido.");
+				System.exit(0);
+			}
+			
+			int opcion = JOptionPane.showOptionDialog(null, "Gracias por utilizar el " + tituloVentana + ". ¿Desea Continuar?",
+					"Finalizar programa", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,null,
+					new String[] {"Continuar", "Cerrar"}, "Continuar");
+			
+			if (opcion == JOptionPane.YES_OPTION) {
+				continuar=true;
+			} else {
+				continuar = false;
+			}
+		}
 		
-		String tipoConversion = (String) JOptionPane.showInputDialog(null, "Seleccione el tipo de conversión:",
-		        "Seleccionar tipo de conversión", JOptionPane.PLAIN_MESSAGE, null, opciones, opciones[0]);
-		
-		conversion.convertir(tipoConversion, cantidad);
-		
-		conversion.getCantidad();
-		conversion.getMensaje();
-		conversion.getMensaje2();
-		String moneda=conversion.getMoneda();
-		double resultado = conversion.getResultado();
-		
-		DecimalFormat formato = new DecimalFormat("#.##");
-		String resultadoString = formato.format(resultado);
-
-		JOptionPane.showMessageDialog(null, cantidad + " pesos mexicanos son equivalentes a " +
-		        resultadoString + " " + moneda + ".");
-
-		
+        JOptionPane.showMessageDialog(null,"Programa Finalizado.");
 	}
+	
 
 }
