@@ -16,8 +16,18 @@ public class ConversorDivisas {
 	
 	public static void convertirPesoMexicano() {
 		
-		String cantidadString = JOptionPane.showInputDialog(null, "Ingrese la cantidad a convertir:");
-        double cantidad = Double.parseDouble(cantidadString);
+		double cantidad = 0;
+		boolean esValido = false;
+		
+		do {
+			try {
+				String cantidadString = JOptionPane.showInputDialog(null, "Ingrese la cantidad a convertir:");
+		        cantidad = Double.parseDouble(cantidadString);
+		        esValido = true;
+			} catch (NumberFormatException e){
+				JOptionPane.showMessageDialog(null, "Error: Debe ingresar la cantidad en numeros");
+			}
+		} while(!esValido);
         
         String[] opciones = {
 				"Peso(MXN) a Dolar", 
