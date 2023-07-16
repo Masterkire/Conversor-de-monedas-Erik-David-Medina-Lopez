@@ -22,10 +22,10 @@ public class Conversor {
 				tituloVentana = "Conversor de Monedas";
 				ConversorDivisas.convertirPesoMexicano();
 				break;
-				/*case "Conversor de Longitudes":
+				case "Conversor de Longitudes":
                 tituloVentana = "Conversor de Longitudes";
-//                ConversorLongitudes.convertirKilometrosAMetros();
-                break;*/
+                ConversorLongitudes.convertirLongitud();
+                break;
 			default:
 				JOptionPane.showMessageDialog(null, "Tipo de conversor inválido.");
 				System.exit(0);
