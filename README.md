@@ -27,8 +27,13 @@ Este es un proyecto de una aplicación de conversión de unidades desarrollado e
 ## Capturas de pantalla / Videos
 
 
-![Captura de pantalla 1](ruta/captura1.png)
-![Captura de pantalla 2](ruta/captura2.png)
+![Captura de pantalla 1](assets/img/captura1.png)
+![Captura de pantalla 2](assets/img/captura2.png)
+![Captura de pantalla 2](assets/img/captura3.png)
+![Captura de pantalla 2](assets/img/captura4.png)
+![Captura de pantalla 2](assets/img/captura5.png)
+![Captura de pantalla 2](assets/img/captura6.png)
+![Captura de pantalla 2](assets/img/captura7.png)
 
 ## Contribuciones
 
