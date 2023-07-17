@@ -10,7 +10,7 @@ public class Conversor {
 		
 		while(continuar) {
 			
-			String[] opciones = {"Conversor de Monedas", "Conversor de Longitudes"}; // Agrega más opciones según los conversores que tengas
+			String[] opciones = {"Conversor de Monedas", "Conversor de Longitudes", "Conversor de Peso", "Conversor de Grados"}; // Agrega más opciones según los conversores que tengas
 			String tipoConversor = (String) JOptionPane.showInputDialog(null, "Seleccione el tipo de conversor:",
 					"Seleccionar tipo de conversor", JOptionPane.PLAIN_MESSAGE, null, opciones, opciones[0]);
 			
@@ -22,9 +22,17 @@ public class Conversor {
 				tituloVentana = "Conversor de Monedas";
 				ConversorDivisas.convertirPesoMexicano();
 				break;
-				case "Conversor de Longitudes":
+			case "Conversor de Longitudes":
                 tituloVentana = "Conversor de Longitudes";
                 ConversorLongitudes.convertirLongitud();
+                break;
+			case "Conversor de Peso":
+                tituloVentana = "Conversor de Peso";
+                ConversorPeso.convertirPeso();
+                break;
+			case "Conversor de Grados":
+                tituloVentana = "Conversor de Grados";
+                ConversorGrados.convertirTemperatura();
                 break;
 			default:
 				JOptionPane.showMessageDialog(null, "Tipo de conversor inválido.");
