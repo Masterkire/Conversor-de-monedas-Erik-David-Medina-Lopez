@@ -1,6 +1,6 @@
 # Conversor-de-monedas-Erik-David-Medina-Lopez
 
-Este es un proyecto de una aplicación de conversión de unidades desarrollado en Java.
+Este es un proyecto de una aplicación de conversión de unidades desarrollado en Java, inicialmente se desarrollo como reto del programa ONE Next Education donde se realizaria un conversor de divisas y al conversor se le añadirian mas tipos de conversion como un extra por lo que de momento esta aplicacion tiene conversion de divisas, conversion de longitud, conversion de peso, conversion de grados.
 
 ## Tecnologías utilizadas
 
