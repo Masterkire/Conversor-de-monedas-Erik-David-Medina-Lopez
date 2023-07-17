@@ -26,7 +26,6 @@ Este es un proyecto de una aplicación de conversión de unidades desarrollado e
 
 ## Capturas de pantalla / Videos
 
-¡Añade tus propias capturas de pantalla o videos del proyecto funcionando aquí!
 
 ![Captura de pantalla 1](ruta/captura1.png)
 ![Captura de pantalla 2](ruta/captura2.png)
